@@ -3,6 +3,12 @@
 
 using namespace std;
 
+ifstream openFile(string fileName) {
+    ifstream file;
+    file.open(fileName);
+    return file;
+}
+
 int readLine(ifstream &file) {
     string line;
 
@@ -16,8 +22,7 @@ int getToken(string line) {
 }
 
 int main() {
-    ifstream file;
-    file.open("test.cpp");
+    openFile("test.txt");
     readLine(file);
 
 };
