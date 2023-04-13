@@ -1,15 +1,18 @@
 #include <iostream>
 #include <fstream>
+#include <regex>
 
 using namespace std;
 
-ifstream openFile(string fileName) {
-    ifstream file;
-    file.open(fileName);
-    return file;
+const regex intRegex("int");
+
+void getToken(string line) {
+    if (regex_search(line, intRegex)) {
+        cout << "int found" << endl;
+    }
 }
 
-int readLine(ifstream &file) {
+void readLine(ifstream &file) {
     string line;
 
     while (getline(file, line)) {
@@ -17,12 +20,10 @@ int readLine(ifstream &file) {
     }
 }
 
-int getToken(string line) {
-    
-}
-
 int main() {
-    openFile("test.txt");
+    ifstream file;
+    file.open("test.cpp");
     readLine(file);
 
+    return 0;
 };
