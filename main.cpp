@@ -1,65 +1,114 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
+#include <vector>
 
 using namespace std;
 
-const regex intRegex("int"), doubleRegex ("double"), charRegex("char"),
-        floatRegex("float"), boolRegex("bool"), mainRegex("main"), returnRegex("return");
+vector<regex> dataTypeRegexVec = {
+    regex("int"),
+    regex("double"),
+    regex("char"),
+    regex("float"),
+    regex("bool")};
 
-void sendTokenToHTML(string token) {
+vector<regex> keywordsRegexVec = {
+    regex("main"),
+    regex("return")};
+
+vector<regex> cyclesRegexVec = {
+    regex("for"),
+    regex("while"),
+    regex("do")};
+
+vector<regex> conditionalsRegexVec = {
+    regex("if"),
+    regex("else"),
+    regex("switch"),
+    regex("case"),
+    regex("default")};
+
+vector<regex> operatorsRegexVec = {
+    regex("\\+"),
+    regex("\\-"),
+    regex("\\*"),
+    regex("\\/"),
+    regex("\\%"),
+    regex("\\="),
+    regex("\\+\\+"),
+    regex("\\-\\-"),
+    regex("\\!"),
+    regex("\\&\\&"),
+    regex("\\|\\|"),
+    regex("\\<"),
+    regex("\\>"),
+    regex("\\<\\="),
+    regex("\\>\\="),
+    regex("\\!\\="),
+    regex("\\=\\="),
+    regex("\\+\\="),
+    regex("\\-\\="),
+    regex("\\*\\="),
+    regex("\\/\\="),
+    regex("\\%\\="),
+};
+
+void sendTokenToHTML(string token)
+{
     ofstream outputFile;
     outputFile.open("index.html", std::ios::app);
 
-    string tag = "<p class=" + token + ">" + token + "</p>";
+    string tag = "<span class=" + token + ">" + token + "</span>";
     outputFile << tag << endl;
     outputFile.close();
 }
 
-void getToken(string line) {
-    if (regex_search(line, intRegex)) {
-        cout << "int found" << endl;
+void getDataType(string line) {
+    for (regex dataTypeRegex : dataTypeRegexVec)
+    {
+        if (regex_search(line, regex("int"))) sendTokenToHTML("int");
     }
-
-    if (regex_search(line, doubleRegex)) {
-        cout << "double found" << endl;
-    }
-
-    if (regex_search(line, charRegex)) {
-        cout << "char found" << endl;
-    }
-
-    if (regex_search(line, floatRegex)) {
-        cout << "float found" << endl;
-    }
-
-    if (regex_search(line, boolRegex)) {
-        cout << "bool found" << endl;
-    }
-
-    if (regex_search(line, mainRegex)) {
-        cout << "main found" << endl;
-    }
-
-    if (regex_search(line, returnRegex)) {
-        cout << "return found" << endl;
-    }
-
-    sendTokenToHTML(line);
 }
 
-void readLine(ifstream &file) {
+void getToken(string line)
+{
+
+    for (regex dataTypeRegex : dataTypeRegexVec)
+    {
+        if (regex_search(line, dataTypeRegex))
+            getDataType(line);
+    }
+}
+
+void readLine(ifstream &file)
+{
     string line;
 
-    while (getline(file, line)) {
+    while (getline(file, line))
+    {
         getToken(line);
     }
 }
 
-int main() {
+void openFile()
+{
     ifstream file;
     file.open("test.cpp");
     readLine(file);
+}
+
+void clearFile()
+{
+    ofstream outputFile;
+    outputFile.open("index.html");
+    outputFile.clear();
+    outputFile.close();
+}
+
+int main()
+{
+    clearFile();
+    openFile();
 
     return 0;
 };
