@@ -7,7 +7,7 @@ using namespace std;
 
 vector<regex> dataTypeRegexVec = {
     regex("int"),
-    regex("double"),
+    regex("\\bdouble\\b"),
     regex("char"),
     regex("float"),
     regex("bool"),
@@ -20,7 +20,7 @@ vector<regex> keywordsRegexVec = {
 vector<regex> loopsRegexVec = {
     regex("for"),
     regex("while"),
-    regex("\bdo\b")};
+    regex("\\bdo\\b")};
 
 vector<regex> conditionalsRegexVec = {
     regex("if"),
@@ -195,39 +195,29 @@ void getOperatorToken(string line)
 
 void getToken(string line)
 {
-    if (regex_search(line, regex("int"|"double")))
+    if (regex_search(line, regex("\\bint\\b")) || regex_search(line, regex("\\bdouble\\b")) || regex_search(line, regex("\\bchar\\b")) ||
+        regex_search(line, regex("\\bfloat\\b")) || regex_search(line, regex("\\bbool\\b")) || regex_search(line, regex("\\bstring\\b")))
         getDataTypeToken(line);
 
-    /**for (regex dataTypeRegex : dataTypeRegexVec)
-    {
-        if (regex_search(line, dataTypeRegex))
-            getDataTypeToken(line);
-    }
+    if (regex_search(line, regex("\\bmain\\b")) || regex_search(line, regex("\\breturn\\b")))
+        getKeywordToken(line);
 
-    for (regex keywordRegex : keywordsRegexVec)
-    {
-        if (regex_search(line, keywordRegex))
-            getKeywordToken(line);
-    }
+    if (regex_search(line, regex("\\bfor\\b")) || regex_search(line, regex("\\bwhile\\b")) || regex_search(line, regex("\\bdo\\b")))
+        getLoopToken(line);
 
-    for (regex cycleRegex : loopsRegexVec)
-    {
-        if (regex_search(line, cycleRegex))
-            getLoopToken(line);
-    }
+    if (regex_search(line, regex("\\bif\\b")) || regex_search(line, regex("\\belse\\b")) || regex_search(line, regex("\\bswitch\\b")) ||
+        regex_search(line, regex("\\bcase\\b")) || regex_search(line, regex("\\bdefault\\b")))
+        getConditionalToken(line);
 
-    for (regex loopsRegex : conditionalsRegexVec)
-    {
-        if (regex_search(line, loopsRegex))
-            getConditionalToken(line);
-    }
-
-    for (regex operatorsRegex : operatorsRegexVec)
-    {
-        if (regex_search(line, operatorsRegex))
-            getOperatorToken(line);
-    }
-    */
+    if (regex_search(line, regex("\\+")) || regex_search(line, regex("\\-")) || regex_search(line, regex("\\*")) ||
+        regex_search(line, regex("\\/")) || regex_search(line, regex("\\%")) || regex_search(line, regex("\\=")) ||
+        regex_search(line, regex("\\+\\+")) || regex_search(line, regex("\\-\\-")) || regex_search(line, regex("\\!")) ||
+        regex_search(line, regex("\\&\\&")) || regex_search(line, regex("\\|\\|")) || regex_search(line, regex("\\<")) ||
+        regex_search(line, regex("\\>")) || regex_search(line, regex("\\<\\=")) || regex_search(line, regex("\\>\\=")) ||
+        regex_search(line, regex("\\!\\=")) || regex_search(line, regex("\\=\\=")) || regex_search(line, regex("\\+\\=")) ||
+        regex_search(line, regex("\\-\\=")) || regex_search(line, regex("\\*\\=")) || regex_search(line, regex("\\/\\=")) ||
+        regex_search(line, regex("\\%\\=")))
+        getOperatorToken(line);
 }
 
 void readLine(ifstream &file)
