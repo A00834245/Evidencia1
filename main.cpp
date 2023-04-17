@@ -5,10 +5,15 @@
 using namespace std;
 
 const regex intRegex("int");
+const regex doubleRegex("double");
 
 void getToken(string line) {
     if (regex_search(line, intRegex)) {
         cout << "int found" << endl;
+    }
+
+        if (regex_search(line, doubleRegex)) {
+        cout << "double found" << endl;
     }
 }
 
