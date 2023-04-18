@@ -1,0 +1,38 @@
+/*data-type
+keyword
+loop
+conditional
+operator
+special
+
+/*data-type*/
+
+* {
+    background-color: #00072d;
+
+}
+.data-type{
+    font-family: "Courier New", monospace;
+    color: #affc41;
+}
+.keyword{
+    font-family: "Courier New", monospace;
+    font-style: italic;
+    color: #1dd3b0;
+}
+.loop{
+    font-family: "Courier New", monospace;
+    color: #3c1642;
+}
+.conditional{
+    font-family: "Courier New", monospace;
+    color: #ff4766;
+}
+.operator{
+    font-family: "Courier New", monospace;
+    color: #ff9233;
+}
+.special{
+    font-family: "Courier New", monospace;
+    color: #ff3d07;
+}
