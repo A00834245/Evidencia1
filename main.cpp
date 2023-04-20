@@ -16,12 +16,79 @@ Roberto Andonie Hernandez | A01411863
 
 using namespace std;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const regex intRegex("int");
+const regex doubleRegex("double");
+
+void getToken(string line) {
+    if (regex_search(line, intRegex)) {
+        cout << "int found" << endl;
+    }
+
+        if (regex_search(line, doubleRegex)) {
+        cout << "double found" << endl;
+    }
+=======
+vector<regex> dataTypeRegexVec = {
+    regex("int"),
+    regex("\\bdouble\\b"),
+    regex("char"),
+    regex("float"),
+    regex("bool"),
+    regex("string")};
+
+vector<regex> keywordsRegexVec = {
+    regex("main"),
+    regex("return")};
+
+vector<regex> loopsRegexVec = {
+    regex("for"),
+    regex("while"),
+    regex("\\bdo\\b")};
+
+vector<regex> conditionalsRegexVec = {
+    regex("if"),
+    regex("else"),
+    regex("switch"),
+    regex("case"),
+    regex("default")};
+
+vector<regex> operatorsRegexVec = {
+    regex("\\+"),
+    regex("\\-"),
+    regex("\\*"),
+    regex("\\/"),
+    regex("\\%"),
+    regex("\\="),
+    regex("\\+\\+"),
+    regex("\\-\\-"),
+    regex("\\!"),
+    regex("\\&\\&"),
+    regex("\\|\\|"),
+    regex("\\<"),
+    regex("\\>"),
+    regex("\\<\\="),
+    regex("\\>\\="),
+    regex("\\!\\="),
+    regex("\\=\\="),
+    regex("\\+\\="),
+    regex("\\-\\="),
+    regex("\\*\\="),
+    regex("\\/\\="),
+    regex("\\%\\="),
+};
+
+void sendTokenToHTML(string token)
+=======
 void printLine()
+>>>>>>> 5aadb51487060e2533a5e4475d6f4db53cc88d15
 {
     ofstream outputFile;
     outputFile.open("index.html", std::ios::app);
     outputFile << "<br>" << endl;
     outputFile.close();
+>>>>>>> eb82ed70aff03d85682ce573ad38c440c819ad61
 }
 
 ofstream openFile(string fileName)
