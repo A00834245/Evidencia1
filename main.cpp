@@ -1,3 +1,12 @@
+/*
+Evidencia 1. Resaltador de Lexico
+
+Elaborado por: 
+Maruca Cantu Valdes | A00834245
+Mariel Perez Ferrusquia | A00832811
+Roberto Andonie Hernandez | A01411863
+*/
+
 #include <iostream>
 #include <fstream>
 #include <regex>
