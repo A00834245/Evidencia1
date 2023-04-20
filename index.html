@@ -1,5 +1,49 @@
-<span class=int>int</span>
-<span class=main>main</span>
-<span class=return>return</span>
-<span class=double>double</span>
-<span class==>=</span>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lexical Analyzer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<span>#include</span><span>&nbsp</span><span class='operator'>&lt;</span><span>i</span><span>o</span><span>s</span><span>t</span><span>r</span><span>e</span><span>a</span><span>m</span><span class='operator'>&gt;</span><br>
+<span class='keyword'>using</span><span>&nbsp</span><span class='keyword'>namespace</span><span>&nbsp</span><span>s</span><span>t</span><span>d</span><span class='separator'>;</span><br>
+<br>
+<span class='datatype'>int</span><span>&nbsp</span><span class='keyword'>main</span><span>(</span><span class='separator'>)</span><br>
+<span class='separator'>{</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='datatype'>int</span><span>&nbsp</span><span>num1,</span><span>&nbsp</span><span>num2,</span><span>&nbsp</span><span>s</span><span>u</span><span>m</span><span class='separator'>;</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Enter</span><span>&nbsp</span><span>the</span><span>&nbsp</span><span>first</span><span>&nbsp</span><span>number:</span><span>&nbsp</span><span>"</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cin</span><span>&nbsp</span><span class='operator'>&gt;</span><span class='operator'>&gt;</span><span>&nbsp</span><span>n</span><span>u</span><span>m</span><span>1</span><span class='separator'>;</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Enter</span><span>&nbsp</span><span>the</span><span>&nbsp</span><span>second</span><span>&nbsp</span><span>number:</span><span>&nbsp</span><span>"</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cin</span><span>&nbsp</span><span class='operator'>&gt;</span><span class='operator'>&gt;</span><span>&nbsp</span><span>n</span><span>u</span><span>m</span><span>2</span><span class='separator'>;</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>sum</span><span>&nbsp</span><span class='operator'>=</span><span>&nbsp</span><span>num1</span><span>&nbsp</span><span class='operator'>+</span><span>&nbsp</span><span>n</span><span>u</span><span>m</span><span>2</span><span class='separator'>;</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"The</span><span>&nbsp</span><span>sum</span><span>&nbsp</span><span>of</span><span>&nbsp</span><span>"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>num1</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"</span><span>&nbsp</span><span>and</span><span>&nbsp</span><span>"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>num2</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"</span><span>&nbsp</span><span>is</span><span>&nbsp</span><span>"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>sum</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='loop'>for</span><span>&nbsp</span><span>(int</span><span>&nbsp</span><span>i</span><span>&nbsp</span><span class='operator'>=</span><span>&nbsp</span><span>0;</span><span>&nbsp</span><span>i</span><span>&nbsp</span><span class='operator'>&lt;</span><span>&nbsp</span><span>9;</span><span>&nbsp</span><span>i</span><span class='operator'>+</span><span class='operator'>+</span><span class='separator'>)</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='separator'>{</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Queso"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='separator'>}</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>switch</span><span>&nbsp</span><span class='separator'>(</span><span>s</span><span>u</span><span>m</span><span class='separator'>)</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='separator'>{</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>case</span><span>&nbsp</span><span>1</span><span>:</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Uno"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>break</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>case</span><span>&nbsp</span><span>2</span><span>:</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Dos"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>break</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>case</span><span>&nbsp</span><span>3</span><span>:</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Tres"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>break</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>default</span><span>:</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span>cout</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>"Nada"</span><span>&nbsp</span><span class='operator'>&lt;</span><span class='operator'>&lt;</span><span>&nbsp</span><span>e</span><span>n</span><span>d</span><span>l</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='conditional'>break</span><span class='separator'>;</span><br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='separator'>}</span><br>
+<br>
+<span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span></span><span>&nbsp</span><span class='keyword'>return</span><span>&nbsp</span><span>0</span><span class='separator'>;</span><br>
+<span class='separator'>}</span><br>
+</body>
+</html>

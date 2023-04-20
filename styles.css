@@ -1,0 +1,34 @@
+* {
+    background-color: #00072d;
+    color: #fff;
+    font-family: "Courier New", monospace;
+}
+
+.datatype {
+    color: #affc41;
+}
+
+.keyword {
+    font-style: italic;
+    color: #1dd3b0;
+}
+
+.loop {
+    color: #ca38e1;
+}
+
+.conditional {
+    color: #ff4766;
+}
+
+.operator {
+    color: #ff9233;
+}
+
+.separator {
+    color: #e9fb21;
+}
+
+.text {
+    color: #fff;
+}
