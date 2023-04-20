@@ -1,38 +1,34 @@
-/*data-type
-keyword
-loop
-conditional
-operator
-special
-
-/*data-type*/
-
 * {
     background-color: #00072d;
-
-}
-.data-type{
+    color: #fff;
     font-family: "Courier New", monospace;
+}
+
+.datatype {
     color: #affc41;
 }
-.keyword{
-    font-family: "Courier New", monospace;
+
+.keyword {
     font-style: italic;
     color: #1dd3b0;
 }
-.loop{
-    font-family: "Courier New", monospace;
-    color: #3c1642;
+
+.loop {
+    color: #ca38e1;
 }
-.conditional{
-    font-family: "Courier New", monospace;
+
+.conditional {
     color: #ff4766;
 }
-.operator{
-    font-family: "Courier New", monospace;
+
+.operator {
     color: #ff9233;
 }
-.special{
-    font-family: "Courier New", monospace;
-    color: #ff3d07;
+
+.separator {
+    color: #e9fb21;
+}
+
+.text {
+    color: #fff;
 }
